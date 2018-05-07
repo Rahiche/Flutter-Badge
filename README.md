@@ -1,6 +1,6 @@
 # badge
 
-A Flutter widget that help you to create badges
+A Flutter widget that help you to create badges easily.
 
 <p align="center">
   <img src="https://i.imgur.com/qMObRQc.png" alt="badges" style="margin:auto">
