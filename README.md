@@ -10,18 +10,35 @@ A Flutter widget that help you to create badges easily.
 
 
 ## Getting Started
+
+### Add dependency to pubspec.yaml
+
+```yaml
+[...]
+dependencies:
+  badge: any
+[...]
+```
+### Install the package using Terminal
+
+```bash
+$ flutter packages get
+```
+Alternatively, your editor might support flutter packages get. Check the docs for your editor to learn more.
+
 ### import 
 
 ```dart
-import 'package:flutter/badge.dart';
+import 'package:badge/badge.dart';
 ```
 
 ### Example
 
 ```dart
 new Badge.before(
-              value: "Text",
-              child: new Text("button"))
+  value: "Text", // value to show inside the badge
+  child: new Text("button") // text to append (required)
+)
 ```
 
 
