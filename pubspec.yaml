@@ -1,12 +1,12 @@
 name: badge
 description: A Flutter widget that help you to create badages .
 
-version: 0.0.3
+version: 0.0.4
 author: Raouf Rahiche <rraouf30@gmail.com>
 homepage: https://github.com/Rahiche/Flutter-Badge
 
 environment:
-  sdk: '>=1.20.1 <=2.1.0'
+  sdk: '>=1.20.1 <=2.2.0'
 
 dependencies:
   flutter:
