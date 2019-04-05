@@ -5,11 +5,9 @@ library badge;
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
-
 //a widget that paint a Badge with full control
 // the badge can be placed inside the child widget or in the corner
 class Badge extends StatefulWidget {
-
   //the target widget
   final Widget child;
 
@@ -20,13 +18,13 @@ class Badge extends StatefulWidget {
   TextStyle textStyle = new TextStyle(color: Colors.white);
 
   //the badge background color
-  final Color color ;
+  final Color color;
 
   //the badge Border color
-  final Color borderColor ;
+  final Color borderColor;
 
   //the badge border width
-  final double borderSize ;
+  final double borderSize;
 
   //is the badge is circle or a rectangle
   bool isRounded;
@@ -34,16 +32,15 @@ class Badge extends StatefulWidget {
   //the badge position if it's not in the right place
   double positionTop;
   double positionRight;
-  double positionLeft ;
-  double positionBottom ;
-
+  double positionLeft;
+  double positionBottom;
 
   //if the badge is inside we have to set [_before]
-  bool _inside=false;
+  bool _inside = false;
   //if the badge is before or after the child
   bool _before;
   //we can set the space between the badge and the child
-  double spacing ;
+  double spacing;
 
   Badge({
     Key key,
@@ -57,8 +54,8 @@ class Badge extends StatefulWidget {
     this.positionTop = -20.0,
     this.positionRight = -10.0,
     this.positionLeft,
-    this.positionBottom ,
-  }):super(key: key);
+    this.positionBottom,
+  }) : super(key: key);
 
   //create a badge in the left corner of the child in a Stack
   Badge.left({
@@ -72,9 +69,9 @@ class Badge extends StatefulWidget {
     this.textStyle = const TextStyle(color: Colors.white),
     this.positionTop = -20.0,
     this.positionRight = -10.0,
-    this.positionLeft ,
-    this.positionBottom ,
-  }):super(key: key);
+    this.positionLeft,
+    this.positionBottom,
+  }) : super(key: key);
 
   //create a badge in the right corner of the child in a Stack
   Badge.right({
@@ -87,10 +84,10 @@ class Badge extends StatefulWidget {
     this.borderSize = 2.0,
     this.textStyle = const TextStyle(color: Colors.white),
     this.positionTop = -20.0,
-    this.positionRight ,
+    this.positionRight,
     this.positionLeft = -10.0,
-    this.positionBottom ,
-  }):super(key: key);
+    this.positionBottom,
+  }) : super(key: key);
 
   //create a badge after the child in a row
   Badge.after({
@@ -103,11 +100,11 @@ class Badge extends StatefulWidget {
     this.borderSize = 2.0,
     this.textStyle = const TextStyle(color: Colors.white),
     this.positionTop = -20.0,
-    this.positionRight ,
+    this.positionRight,
     this.positionLeft = -10.0,
-    this.positionBottom ,
+    this.positionBottom,
     this.spacing = 0.0,
-  }):super(key: key) {
+  }) : super(key: key) {
     this._inside = true;
     this._before = false;
   }
@@ -127,7 +124,7 @@ class Badge extends StatefulWidget {
     this.positionLeft = -10.0,
     this.positionBottom,
     this.spacing = 0.0,
-  }):super(key: key) {
+  }) : super(key: key) {
     this._inside = true;
     this._before = true;
   }
@@ -198,7 +195,10 @@ class _BadgeState extends State<Badge> {
   BoxDecoration badgeDecoration() {
     return new BoxDecoration(
         color: widget.color,
-        border: new Border.all(color: widget.borderColor, width: widget.borderSize),
+        border: new Border.all(
+          color: widget.borderColor,
+          width: widget.borderSize,
+        ),
         borderRadius: widget.isRounded == true
             ? new BorderRadius.circular(100.0)
             : new BorderRadius.circular(0.0));
