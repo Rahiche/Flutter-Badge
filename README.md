@@ -1,13 +1,12 @@
 # badge
 
+[![pub package](https://img.shields.io/pub/v/badge.svg)](https://pub.dartlang.org/packages/badge)
+
 A Flutter widget that help you to create badges easily.
 
 <p align="center">
   <img src="https://i.imgur.com/qMObRQc.png" alt="badges" style="margin:auto">
 </p>
-
-
-
 
 ## Getting Started
 
@@ -19,14 +18,16 @@ dependencies:
   badge: any
 [...]
 ```
+
 ### Install the package using Terminal
 
 ```bash
 $ flutter packages get
 ```
+
 Alternatively, your editor might support flutter packages get. Check the docs for your editor to learn more.
 
-### import 
+### import
 
 ```dart
 import 'package:badge/badge.dart';
@@ -40,7 +41,6 @@ new Badge.before(
   child: new Text("button") // text to append (required)
 )
 ```
-
 
 For help getting started with Flutter, view our online [documentation](https://flutter.io/).
 
