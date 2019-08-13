@@ -5,3 +5,7 @@
 .packages
 .pub/
 packages
+*.iml
+*.ipr
+*.iws
+.DS_Store
